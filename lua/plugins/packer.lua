@@ -23,6 +23,15 @@ return require('packer').startup(function(use)
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
 
+	------------ Highlight
+	use('valloric/matchtagalways')
+
+	------------ Autopair
+	use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+	}
+
 	------------- NerdTree
 	use('preservim/nerdtree')
 	use('vwxyutarooo/nerdtree-devicons-syntax')

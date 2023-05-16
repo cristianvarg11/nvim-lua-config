@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  ------------ Colorscheme
+  ------------ Colorschemes
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 
   vim.cmd('colorscheme rose-pine')
@@ -25,8 +25,8 @@ return require('packer').startup(function(use)
 
 	------------- NerdTree
 	use('preservim/nerdtree')
-	use ('vwxyutarooo/nerdtree-devicons-syntax')
-	use ('ryanoasis/vim-devicons')
+	use('vwxyutarooo/nerdtree-devicons-syntax')
+	use('ryanoasis/vim-devicons')
 
 	-------------- Tmux navigator
 	use('christoomey/vim-tmux-navigator')

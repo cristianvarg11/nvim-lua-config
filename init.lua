@@ -10,4 +10,4 @@ require("plugins.nerdtree.nerdtree")
 require("plugins.lsp.lsp")
 require("plugins.formatter.formatter-configs")
 require("plugins.aesthetics.tagmatcher")
-
+require("plugins.lualine.lualine")

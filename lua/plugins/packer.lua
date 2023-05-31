@@ -76,4 +76,13 @@ return require('packer').startup(function(use)
 	--------------- Emmet
 	use('mattn/emmet-vim')
 
+
+	--------------- Comment
+	use {
+			'numToStr/Comment.nvim',
+			config = function()
+					require('Comment').setup()
+			end
+	}
+	use('JoosepAlviste/nvim-ts-context-commentstring')
 end)

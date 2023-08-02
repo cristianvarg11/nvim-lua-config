@@ -85,4 +85,7 @@ return require('packer').startup(function(use)
 			end
 	}
 	use('JoosepAlviste/nvim-ts-context-commentstring')
+
+	--------------- Images
+	use {'edluffy/hologram.nvim'}
 end)

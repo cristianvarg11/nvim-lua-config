@@ -12,5 +12,7 @@
 
    > npm i -g yarn
 
-3. In order to see the icons in the navigation tree, we need some sources, some DE or distros already have them, in my case I use I3 and it is necessary to install the following:
+3. To install the plugins on nvim, it's necessary install [Packer](https://github.com/wbthomason/packer.nvim)
+
+4. In order to see the icons in the navigation tree, we need some sources, some DE or distros already have them, in my case I use I3 and it is necessary to install the following:
    > yay -S nerd-fonts-meta otf-powerline-symbols-git ttf-all-the-icons ttf-devicons ttf-material-design-icons ttf-weather-icons

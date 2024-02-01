@@ -1,14 +1,14 @@
 local Utils = require("utils")
 
-local exprnnoremap = Utils.exprnnoremap
-local nnoremap = Utils.nnoremap
-local vnoremap = Utils.vnoremap
-local xnoremap = Utils.xnoremap
-local inoremap = Utils.inoremap
-local tnoremap = Utils.tnoremap
+-- local exprnnoremap = Utils.exprnnoremap
+-- local nnoremap = Utils.nnoremap
+-- local vnoremap = Utils.vnoremap
+-- local xnoremap = Utils.xnoremap
+-- local inoremap = Utils.inoremap
+-- local tnoremap = Utils.tnoremap
+-- local xmap = Utils.xmap
 local nmap = Utils.nmap
 local imap = Utils.imap
-local xmap = Utils.xmap
 
 -- Leader key
 vim.g.mapleader = "["
@@ -23,3 +23,4 @@ nmap("<leader>t", ":NERDTreeFind<CR>")
 nmap("<leader>fo", ":Prettier<CR>")
 nmap("<leader>sp", ":vsplit<CR>")
 nmap("<leader>ko", ":terminal<CR>")
+nmap("<leader>ft", ":Telescope telescope-tabs list_tabs<CR>")

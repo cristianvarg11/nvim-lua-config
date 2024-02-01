@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 	use 'olacin/telescope-cc.nvim' -- Integration with conventional commits
+	use 'xiyaowong/telescope-emoji' -- Emojis! :D
+	use 'LukasPietzschmann/telescope-tabs' -- To switch tabs
 
   ------------ Colorschemes
   use({ 'rose-pine/neovim', as = 'rose-pine' })

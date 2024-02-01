@@ -1,5 +1,6 @@
 local builtin = require('telescope.builtin')
 local telescope = require('telescope')
+
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
@@ -10,29 +11,27 @@ telescope.setup({
         conventional_commits = {
             theme = "ivy", -- custom theme
             action = function(entry)
-                -- entry = {
-                --     display = "feat       A new feature",
-                --     index = 7,
-                --     ordinal = "feat",
-                --     value = feat"
-                -- }
                 vim.print(entry)
             end,
             include_body_and_footer = true, -- Add prompts for commit body and footer
         },
+					emoji = {
+						action = function(emoji)
+							vim.fn.setreg("*", emoji.value)
+							print([[Press p or "*p to paste this emoji]] .. emoji.value)
+						end,
+				}
     },
 })
 
 local function create_conventional_commit()
     local actions = require("telescope._extensions.conventional_commits.actions")
     local picker = require("telescope._extensions.conventional_commits.picker")
-    local themes = require("telescope.themes")
 
     -- if you use the picker directly you have to provide your theme manually
     picker({
         action = actions.prompt,
         include_body_and_footer = true,
-        -- theme = themes["get_ivy"]() -- ivy theme
     })
 end
 
@@ -43,5 +42,7 @@ vim.keymap.set(
   { desc = "Create conventional commit" }
 )
 
-
+-- Load extensions
 telescope.load_extension("conventional_commits")
+telescope.load_extension("emoji")
+

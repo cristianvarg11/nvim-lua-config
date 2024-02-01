@@ -9,14 +9,15 @@ return require('packer').startup(function(use)
 
   ------------ Telescope
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-  -- or                            , branch = '0.1.x',
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+	use 'olacin/telescope-cc.nvim' -- Integration with conventional commits
 
   ------------ Colorschemes
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 	use { "catppuccin/nvim", as = "catppuccin" }
+	use { "ellisonleao/gruvbox.nvim" }
 
 
 	------------ Treesitter

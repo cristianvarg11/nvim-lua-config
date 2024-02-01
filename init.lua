@@ -2,6 +2,8 @@
 require('general')
 require("keymaps.keymaps")
 require("colors.colors")
+-- require("colors.gruvbox")
+
 
 -- Plugins
 require("plugins.packer")

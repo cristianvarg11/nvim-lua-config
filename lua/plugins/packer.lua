@@ -16,6 +16,18 @@ return require('packer').startup(function(use)
 	use 'xiyaowong/telescope-emoji' -- Emojis! :D
 	use 'LukasPietzschmann/telescope-tabs' -- To switch tabs
 
+	------------- AI
+	use {
+		'Exafunction/codeium.vim',
+		config = function ()
+			-- Change '<C-g>' here to any keycode you like.
+			vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+			vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+			vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+			vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+		end
+	}
+
   ------------ Colorschemes
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 	use { "catppuccin/nvim", as = "catppuccin" }

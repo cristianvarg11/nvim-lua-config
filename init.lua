@@ -2,7 +2,7 @@
 require('general')
 require("keymaps.keymaps")
 require("colors.colors")
--- require("colors.gruvbox")
+require("colors.gruvbox")
 
 
 -- Plugins

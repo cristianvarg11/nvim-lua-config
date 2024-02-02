@@ -8,6 +8,7 @@ lsp.ensure_installed({
 	'html',
 	'cssls',
 	'lua_ls',
+	'eslint',
 })
 
 -- Fix Undefined global 'vim'

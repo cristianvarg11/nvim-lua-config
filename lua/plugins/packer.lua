@@ -14,7 +14,6 @@ return require('packer').startup(function(use)
   }
 	use 'olacin/telescope-cc.nvim' -- Integration with conventional commits
 	use 'LukasPietzschmann/telescope-tabs' -- To switch tabs
-	use 'olacin/telescope-gitmoji.nvim' -- Integration with gitmoji
 
 	------------- AI
 	use {
